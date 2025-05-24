@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<data-extraction-rules>
+<data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
     <cloud-backup>
         <!-- Include all shared preferences -->
         <include domain="sharedpref" path="."/>
         <!-- Include the main application database -->
         <include domain="database" path="main_app_database.db"/>
         <!-- Exclude any temporary files or sensitive data -->
-        <exclude domain="file" path="temp_cache/"/>
+        <exclude domain="file" path="temp_cache/"
+            tools:ignore="FullBackupContent" />
         <exclude domain="sharedpref" path="api_keys_prefs.xml"/>
     </cloud-backup>
     <device-transfer>
