@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cred_dark_background"
+    tools:context=".ProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cred_dark_background"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/arrow_back" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/cred_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:id="@+id/button_support"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/support_agent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/cred_text_secondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_gravity="right" />
+                app:layout_constraintTop_toTopOf="@id/button_support"
+                app:layout_constraintBottom_toBottomOf="@id/button_support" />
+            <TextView
+                android:id="@+id/button_support_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="services"
+                android:textColor="@color/cred_text_secondary"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/button_support"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_support"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 1. Profile Header Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:civ_border_color="@color/cred_card_background"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Asrith Behala"
+                    android:textColor="@color/cred_text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/image_profile"
+                    app:layout_constraintTop_toTopOf="@id/image_profile"
+                    app:layout_constraintEnd_toStartOf="@+id/button_edit_profile"/>
+
+                <TextView
+                    android:id="@+id/text_member_since"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="member since Dec, 2020"
+                    android:textColor="@color/cred_text_secondary"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/text_name"
+                    app:layout_constraintTop_toBottomOf="@id/text_name"
+                    app:layout_constraintEnd_toStartOf="@+id/button_edit_profile"/>
+
+                <ImageButton
+                    android:id="@+id/button_edit_profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/edit"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@color/cred_text_secondary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/image_profile"
+                    app:layout_constraintBottom_toBottomOf="@id/image_profile"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 2. CRED Garage Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cred_card_background"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="24dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon_garage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/directions_car"
+                        app:tint="@color/cred_text_secondary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/text_garage_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="get to know your vehicles, inside out"
+                        android:textColor="@color/cred_text_secondary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@id/icon_garage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/arrow_garage"/>
+
+                    <TextView
+                        android:id="@+id/text_garage_subtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="CRED garage"
+                        android:textColor="@color/cred_text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/text_garage_title"
+                        app:layout_constraintTop_toBottomOf="@id/text_garage_title"
+                        app:layout_constraintEnd_toStartOf="@+id/arrow_garage"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/arrow_garage"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/arrow_forward_ios"
+                        app:tint="@color/cred_text_secondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <include layout="@layout/list_item_profile"
+                android:id="@+id/item_credit_score"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cred_divider"
+                android:layout_marginStart="48dp" />
+            <include layout="@layout/list_item_profile"
+                android:id="@+id/item_lifetime_cashback"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cred_divider"
+                android:layout_marginStart="48dp"/>
+            <include layout="@layout/list_item_profile"
+                android:id="@+id/item_bank_balance"/>
+
+            <!-- 4. YOUR REWARDS & BENEFITS Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rewards &amp; Benefits"
+                android:textColor="@color/cred_text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"/>
+
+            <include layout="@layout/list_item_profile"
+                android:id="@+id/item_cashback_balance"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cred_divider"
+                android:layout_marginStart="48dp"/>
+            <include layout="@layout/list_item_profile"
+                android:id="@+id/item_coins"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cred_divider"
+                android:layout_marginStart="48dp"/>
+            <include layout="@layout/list_item_profile"
+                android:id="@+id/item_win_upto"/>
+
+
+            <!-- 5. TRANSACTIONS & SUPPORT Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRANSACTIONS &amp; SUPPORT"
+                android:textColor="@color/cred_text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"/>
+
+            <include layout="@layout/list_item_profile"
+                android:id="@+id/item_all_transactions"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

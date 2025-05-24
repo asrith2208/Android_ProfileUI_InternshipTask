@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProfileAppCredStyle" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/cred_dark_background</item>
+        <item name="colorPrimaryVariant">@color/cred_dark_background</item>
+        <item name="colorOnPrimary">@color/cred_text_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/cred_green_accent</item>
+        <item name="colorSecondaryVariant">@color/cred_green_accent</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/cred_dark_background</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/cred_dark_background</item>
+        <item name="android:textColorPrimary">@color/cred_text_primary</item>
+        <item name="android:textColorSecondary">@color/cred_text_secondary</item>
+    </style>
+
+    <!-- Final application theme -->
+    <style name="Theme.ProfileAppCredStyle" parent="Base.Theme.ProfileAppCredStyle" />
+</resources>
