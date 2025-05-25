@@ -28,18 +28,12 @@ This project is an Android application developed as a submission for the assignm
     *   "TRANSACTIONS & SUPPORT" section (all transactions)
 *   Appropriate use of drawables for icons where needed.
 
-## Screenshots
-
-Below is a screenshot of the implemented Profile Activity:
-
-
-![Profile Activity Screenshot](URL_TO_YOUR_SCREENSHOT_IN_THIS_REPO_GOES_HERE)
 
 
 ## How to Build and Run
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/[YOUR_USERNAME]/[YOUR_REPOSITORY_NAME].git
+      https://github.com/asrith2208/Android_ProfileUI_InternshipTask.git
     ```
     
 2.  **Open in Android Studio:**
@@ -55,9 +49,36 @@ Below is a screenshot of the implemented Profile Activity:
     *   Click the "Run 'app'" button (the green play icon) in the Android Studio toolbar.
     *   The application should build, install, and launch, displaying the Profile Activity.
 
-## Notes
+## Notes!
+
 *   This project focuses primarily on UI/UX replication from a static design.
 *   Functionality for buttons or navigation (like the edit icon, refresh, arrows, etc.) is purely visual unless specified otherwise or if I decided to add basic placeholders.
 *   The data displayed is static and hardcoded in the layouts/strings as per the visual design.
 
 ---
+## Screenshots
+
+### Reference Design
+<img src="https://github.com/user-attachments/assets/5d9bd6ad-7b57-4165-ab74-45045525d1b1" alt="Reference: assignment_android.jpg" width="300">
+_This is the reference design provided for the assignment._
+
+### My Output
+Here are the screenshots of my implemented UI:
+
+**Screenshot 1 :**
+<img src="https://github.com/user-attachments/assets/a1e608a4-0c8d-4dc3-9789-f3d2f0caee4a" alt="Output Screenshot 1" width="300">
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>Reference Design</strong><br>
+      <img src="https://github.com/user-attachments/assets/5d9bd6ad-7b57-4165-ab74-45045525d1b1" alt="Reference: assignment_android.jpg" width="300">
+      <br><em>Provided reference</em>
+    </td>
+    <td align="center">
+      <strong>OUTPUT DESIGN</strong><br>
+      <img src="https://github.com/user-attachments/assets/908f5345-b9df-4ae2-8018-9d3f99d0b044" alt="Output Screenshot 2" width="300">
+      <br><em>Implemented UI</em>
+    </td>
+  </tr>
+</table>
